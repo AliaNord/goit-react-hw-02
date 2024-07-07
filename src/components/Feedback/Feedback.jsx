@@ -1,20 +1,10 @@
-import Options from "../Options/Options";
-
 const Feedback = (
-  {updateFeedback,
-  handleReset,
-  totalFeedback,
+  {totalFeedback,
   feedbackPercentage,
   feedbacks}
 ) => {
   return (
     <>
-      <Options
-        updateFeedback={updateFeedback}
-        handleReset={handleReset}
-        totalFeedback={totalFeedback}
-      />
-      {totalFeedback > 0 && (
         <ul>
           <li>Good : {feedbacks.good}</li>
           <li>Neutral : {feedbacks.neutral}</li>
@@ -22,7 +12,6 @@ const Feedback = (
           <li>Total : {totalFeedback}</li>
           <li>Positive : {feedbackPercentage}%</li>
         </ul>
-      )}
     </>
   );
 };
